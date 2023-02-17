@@ -1,4 +1,4 @@
-container {
+.appContainer {
   max-width: 800px;
   display: flex;
   flex-direction: column;
@@ -7,3 +7,7 @@ container {
   align-items: center;
 }
 
+.resultContainer{
+  font-size: 2rem;
+  text-align: center;
+}
