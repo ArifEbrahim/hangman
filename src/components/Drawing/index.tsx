@@ -1,4 +1,3 @@
-import React from 'react'
 import classes from './Drawing.module.css'
 
 const HEAD = <div className={classes.head} />
