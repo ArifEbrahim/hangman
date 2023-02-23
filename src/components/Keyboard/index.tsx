@@ -1,8 +1,13 @@
-import React from 'react'
+import classes from './Keyboard.module.css'
+import { KEYS } from './keys'
 
 function index() {
   return (
-    <div>index</div>
+    <div className={classes.container}>
+      {KEYS.map((letter) => (
+        <button key={letter}>{letter}</button>
+      ))}
+    </div>
   )
 }
 
