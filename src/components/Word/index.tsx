@@ -1,13 +1,13 @@
-import classes from './Word.module.css'
+import styles from './Word.module.css'
 
 function index() {
   const word = 'test'
   const guessedLetters = ['t']
   return (
-    <div className={classes.container}>
+    <div className={styles.container}>
       {word.split('').map((letter, index) => (
-        <span className={classes.letterWrapper} key={index}>
-          <span className={guessedLetters.includes(letter) ? classes.letterVisible : classes.letterHidden}>
+        <span className={styles.letterWrapper} key={index}>
+          <span className={guessedLetters.includes(letter) ? styles.letterVisible : styles.letterHidden}>
             {letter}
           </span>
         </span>
