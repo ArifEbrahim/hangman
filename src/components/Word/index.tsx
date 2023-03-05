@@ -1,13 +1,25 @@
 import styles from './Word.module.css'
 
-function index() {
-  const word = 'test'
-  const guessedLetters = ['t']
+type WordProps = {
+  guessedLetters: string[]
+  wordToGuess: string
+  reveal: boolean
+}
+
+function index({ guessedLetters, wordToGuess, reveal = false }: WordProps) {
   return (
     <div className={styles.container}>
-      {word.split('').map((letter, index) => (
+      {wordToGuess.split('').map((letter, index) => (
         <span className={styles.letterWrapper} key={index}>
-          <span className={guessedLetters.includes(letter) ? styles.letterVisible : styles.letterHidden}>
+          <span
+            className={`${
+              guessedLetters.includes(letter) || reveal
+                ? styles.letterVisible
+                : styles.letterHidden
+            } ${
+              !guessedLetters.includes(letter) && reveal ? styles.letterRed : ''
+            }`}
+          >
             {letter}
           </span>
         </span>

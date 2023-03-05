@@ -7,15 +7,16 @@ const LEFT_ARM = <div className={styles.leftArm} />
 const RIGHT_LEG = <div className={styles.rightLeg} />
 const LEFT_LEG = <div className={styles.leftLeg} />
 
-function index() {
+const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
+
+type DrawingProps = {
+  numberOfGuesses: number
+}
+
+function index({numberOfGuesses}: DrawingProps) {
   return (
     <div className={styles.container}>
-      {HEAD}
-      {BODY}
-      {LEFT_ARM}
-      {RIGHT_ARM}
-      {LEFT_LEG}
-      {RIGHT_LEG}
+      {BODY_PARTS.slice(0, numberOfGuesses)}
       <div className={styles.hangbar} />
       <div className={styles.topBar} />
       <div className={styles.middleBar} />

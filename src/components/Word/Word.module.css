@@ -18,3 +18,7 @@
 .letterHidden{
   visibility: hidden;
 }
+
+.letterRed{
+  color: red;
+}
